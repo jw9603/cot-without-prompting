@@ -1,6 +1,6 @@
 # CoT-Decoding
 
-논문 **"Chain-of-Thought Reasoning without Prompting"** (Wang & Zhou, 2024)의 Table 4를 재현하고, 다양한 모델/데이터셋에서 디코딩 전략별 성능을 비교할 수 있도록 구현했습니다.
+논문 [**"Chain-of-Thought Reasoning without Prompting"** (Wang & Zhou, 2024)](https://arxiv.org/pdf/2402.10200)의 Table 4를 재현하고, 다양한 모델/데이터셋에서 디코딩 전략별 성능을 비교할 수 있도록 구현했습니다.
 
 프롬프트 엔지니어링 없이, **디코딩 방식만 바꿔서** LLM의 내재된 Chain-of-Thought 추론 경로를 이끌어내는 방법.
 
