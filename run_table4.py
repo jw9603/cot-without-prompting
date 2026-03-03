@@ -346,7 +346,7 @@ DATASET_CONFIGS = {
 
 def main():
     parser = argparse.ArgumentParser(description="Table 4 Reproduction: CoT-decoding comparison")
-    parser.add_argument("--model", type=str, default="meta-llama/Llama-3.1-8B")
+    parser.add_argument("--model", type=str, default="mistralai/Mistral-7B-v0.1")
     parser.add_argument("--dataset", type=str, default="gsm8k",
                         choices=list(DATASET_CONFIGS.keys()),
                         help="데이터셋 선택: gsm8k (자유응답) / kmmlu (MCQA)")
