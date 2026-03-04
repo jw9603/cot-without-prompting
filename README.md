@@ -105,6 +105,10 @@ python visualize.py ./results_gsm8k
 
 ![Table 4](fig/tab4.png)
 
+### 재현 결과 (Mistral-7B-v0.1, GSM8K, N=200)
+
+![Mistral-7B Result](fig/table4_mistral.png)
+
 ### 지원 전략
 
 | 전략 | 설명 |

@@ -100,15 +100,18 @@ class FreeFormExtractor(AnswerExtractor):
         self._fallback_pattern = r'(-?[\d,]+\.?\d*)'
 
     def extract(self, text: str) -> str | None:
+        # 반복 생성 방지: 첫 번째 응답만 사용 (Q: 또는 \n\n 이전까지)
+        first_answer = re.split(r'\nQ:|\n\n', text)[0].strip()
+
         # 기본 패턴
-        match = re.search(self.answer_pattern, text)
+        match = re.search(self.answer_pattern, first_answer)
         if match:
-            return match.group(1).strip()
+            return match.group(1).strip().rstrip('.')
 
         # fallback: 마지막 숫자
-        matches = re.findall(self._fallback_pattern, text)
+        matches = re.findall(self._fallback_pattern, first_answer)
         if matches:
-            return matches[-1].replace(",", "")
+            return matches[-1].replace(",", "").rstrip('.')
 
         return None
 
